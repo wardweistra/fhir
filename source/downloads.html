@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 
 [%settitle Implementation Details%]
@@ -181,3 +182,192 @@ may be used, including code generated from the schemas.
 [%file newfooter%]
 </body>
 </html>
+=======
+<!DOCTYPE HTML>
+
+[%settitle Implementation Details%]
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+[%file newheader%]
+</head>
+<body>
+[%file newnavbar%]
+
+
+
+
+<h1>Downloads</h1>
+
+<table class="colsi"><tr><td id="wg"><a _target="blank" href="[%wg fhir%]">[%wgt fhir%]</a> Work Group</td><td id="fmm"><a href="versions.html#maturity">Maturity Level</a>: N/A</td><td id="ballot"><a href="versions.html#std-process">Standards Status</a>:<!--!ns!--><a href="versions.html#std-process">Informative</a></td></tr></table>
+
+<table class="lines">
+
+  <tr>
+    <td colspan="2" style="background: #eeeeee"><b>Specification Downloads</b></td>
+  </tr>
+
+  <tr>
+    <td>FHIR Definitions</td>
+    <td>All the value sets, profiles, etc. defined as part of the FHIR specification, and the included implementation guides:
+      <ul>
+       <li><a href="definitions.xml.zip">XML</a></li>
+       <li><a href="definitions.json.zip">JSON</a></li>
+      </ul>
+      This is the master set of definitions that should be the first choice whenever generating any implementation artifacts. All
+      the other forms below include only subsets of the information available in these definition files, and do not contain all of the rules about what makes resources valid. Implementers
+      will still need to be familiar with the content of the specification and with any <a href="profiling.html">profiles that apply to the resources</a> in order to make a conformant implementation.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+
+  <tr>
+    <td>XML</td>
+    <td>
+      <ul>
+       <li><a href="examples.zip">Examples</a> - all the example resources in XML format</li>
+       <li><a href="fhir-all-xsd.zip">Validation Schemas</a> (includes support schemas, resource schemas, modular &amp; combined schemas, and Schematrons)</li>
+       <li><a href="fhir-codegen-xsd.zip">Code Generation Schemas</a> (see <a href="xml.html#schema-gen">notes about code-generation schemas</a>)<br/>
+       <i>Note that names relevant for code generation, including resource names, element &amp; slice names, codes, etc. may collide with reserved words in the relevant target language, and code generators will need to handle this</i></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+
+  <tr>
+    <td>JSON</td>
+    <td>
+      <ul>
+       <li><a href="examples-json.zip">Examples</a> - all the example resources in JSON format</li>
+       <li><a href="fhir.schema.json.zip">JSON Schema</a> (Needs <a href="https://json-schema.org/draft-06/json-schema-release-notes.html">JSON Schema draft-06</a> or more recent)</li>
+       <li><a href="examples-ndjson.zip">Examples</a> - all the example resources in <a href="nd-json.html">ND-JSON format</a> (bulk data format)</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+
+  <tr>
+    <td>RDF</td>
+    <td>
+      <ul>
+       <li><a href="examples-ttl.zip">Turtle Examples</a> - all the example resources in Turtle format</li>
+       <li><a href="fhir.schema.shex.zip">ShEx Schemas</a> - <a href="https://www.w3.org/2001/sw/wiki/ShEx">ShEx</a> definitions for validating RDF resources</li>
+       <li><a href="fhir.rdf.ttl.zip">Definitions</a> - the formal definitions that define the predicates and classes used in the RDF format</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+
+  <tr>
+    <td>GraphQL</td>
+    <td>
+      <ul>
+       <li><a href="fhir.schema.graphql.zip">GraphQL Schemas</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr/></td>
+  </tr>
+
+  <tr>
+    <td>FHIR Specification</td>
+    <td><!--<a href="fhir-spec.zip"> -->The whole specification<!--</a>--> so that you can host your own local copy (does not include the downloads) (not downloadable from build.fhir.org)</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="background: #eeeeee"><b>Implementation Tools</b></td>
+  </tr>
+
+  <tr>
+    <td>Validator</td>
+    <td>The <a href="https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar">official FHIR validator</a> - a Java jar file that can be used to validate resources. See <a href="validation.html">Validation Tools</a> for further information, or <a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">Using the FHIR Validator</a> for parameter documentation</td>
+  </tr>
+
+  <tr>
+    <td>IG Publisher</td>
+    <td>The <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Implementation Guide Publishing Tool</a> (see <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG Publishing documentation</a>)</td>
+  </tr>
+
+  <tr>
+    <td>NPM Packages</td>
+    <td>
+      There are several packages that support the FHIR specification:
+      <ul>
+        <li><b><code><a href="hl7.fhir.r5.core.tgz">hl7.fhir.r5.core</a></code></b>: Contains all the resources needed to test conformance to the FHIR specification, and/or generate code</li>
+        <li><b><code><a href="hl7.fhir.r5.expansions.tgz">hl7.fhir.r5.expansions</a></code></b>: Contains the expansions of the subset of the value sets the have a required binding (other than those that can't be expanded at all)</li>
+        <li><b><code><a href="hl7.fhir.r5.examples.tgz">hl7.fhir.r5.examples</a></code></b>: All the resources that are defined as part of the FHIR specification</li>
+        <li><b><code><a href="hl7.fhir.r5.elements.tgz">hl7.fhir.r5.elements</a></code></b>: A set of <a href="structuredefinition.html">StructureDefinition</a> resources that represent the resources and datatypes as a series of independently defined data elements</li>
+        <li><b><code><a href="hl7.fhir.r5.corexml.tgz">hl7.fhir.r5.corexml</a></code></b>: The same content as hl7.fhir.r5.core, but with the resources in XML, not JSON</li>
+      </ul>    
+    These packages are used by many of the FHIR tools (e.g. the IG publisher and the validator). Note that the tools usually find this package directly through the NPM-based distribution framework, and there's no need to download them</td>
+  </tr>
+
+  <tr>
+    <td>Spreadsheets</td>
+    <td>All the resource structures in a <a href="definitions.xlsx.zip">Spreadsheet Format</a> - mostly provided to assist with mapping</td>
+  </tr>
+
+  <tr>
+    <td>Translation File</td>
+    <td><a href="translations.xml">Translations of common FHIR names and messages</a> into multiple languages (see <a href="https://chat.fhir.org/#narrow/stream/10-translations">chat.fhir.org translations stream</a> for guidance on how to add to more)</td>
+  </tr>
+
+  <tr>
+    <td>Icon Pack</td>
+    <td>The <a href="icon-pack.zip">FHIR Icon at various resolutions</a>. Any FHIR Implementation created by an organization that has attended a connectathon is allowed to use the FHIR icon in association with the application (this policy will be reviewed in the future).</td>
+  </tr>
+
+  <tr>
+    <td>Test Cases</td>
+    <td>Test cases can mainly be found in the <a href="https://github.com/FHIR/fhir-test-cases/releases">fhir-test-cases</a> repository</td>
+  </tr>
+
+  <tr>
+    <td>Code Generation Support</td>
+    <td>ValueSet expansions for the value sets used in schema generation (<a href="expansions.xml">XML</a> or <a href="expansions.json">JSON</a>) + a list of all <a href="choice-elements.json">choice elements</a> &amp; <a href="backbone-elements.json">backbone elements</a>.
+    Note that names relevant for code generation, including resource names, element &amp; slice names, codes, etc. may collide with reserved words in the relevant target language, and code generators will need to handle this</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="background: #eeeeee"><b>Reference Implementations</b><a name="refimpl"></a></td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+    There are many open source reference implementations available to help implementers.
+    The HL7 Confluence contains a list of the <a href="https://confluence.hl7.org/display/FHIR/Open+Source+Implementations">common implementations used by implementers</a>.
+    </td>
+  </tr>
+  
+ </table>
+
+[%impl-note%]
+These reference implementations are provided for implementer interest and assistance.
+While they may be used (and are) in production systems, HL7 and their various contributors accept no
+liability for their use. <span style="color: Maroon">Note that these reference implementations are
+provided to assist to implementers to adopt the specification, and some are maintained by the FHIR
+project team, but are not part of the specification, and implementations are not required to
+conform to these, nor are they subject to the formal standards process.</span>
+[%end-note%]
+<hr/>
+<p>
+Full blown open source implementations for FHIR, some of which use these reference implementations, are
+listed on <a href="https://confluence.hl7.org/display/FHIR/Open+Source+Implementations">HL7 Confluence</a>.
+</p>
+<p>
+It is not necessary to use these particular implementations in order to be conformant. Any other approach
+may be used, including code generated from the schemas.
+</p>
+
+[%file newfooter%]
+</body>
+</html>
+>>>>>>> c485622f47 (Adding missing horizontal line)
